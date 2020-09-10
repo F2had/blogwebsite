@@ -16,6 +16,7 @@ let contactContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
 const posts = [];
 
 app.get('/', function(req, res){
+    console.log(posts);
     res.render('home', {
         homeContent : homeContent, 
         posts: posts
@@ -48,7 +49,21 @@ app.post('/compose', function(req, res){
     res.redirect('/');
 });
 
+app.get("/posts/:postTitle" , function(req, res){
+        console.log(isPost(req.params.postTitle));
+    
+});
 
+
+function isPost(title){
+
+    for (let i = 0; i < posts.length; i++) {
+        if(posts[i].title === title){
+            return 'Found';
+        }
+    }
+    return 'Not Found';
+}
 app.listen(4321, function(){
     console.log("Server running on port 4321!");
 });
