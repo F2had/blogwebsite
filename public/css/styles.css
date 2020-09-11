@@ -37,3 +37,10 @@
 .github-icon {
     color: #000; 
 }
+#viewMore {
+    display: none;
+}
+
+.fullText {
+    display: none;
+}

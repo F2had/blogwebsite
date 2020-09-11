@@ -2,8 +2,12 @@
 <h2 class="text-center">Welcome</h2>
 
   <% posts.forEach(post => { %>
-    <h1> <%= post.title %> </h1>
-    <p> <%= post.content %> </p>
+    <h1 class="title"> <%= post.title %> </h1>
+    <p class="moreText"> <%= post.content.substr(0, 100) + " ..." %>
+      <a href="/post/<%= post.title%> "> Read more</a>
+    </p>
+    
   <% }) %>
 
 <%- include('partials/footer'); %> 
+
