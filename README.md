@@ -13,7 +13,7 @@ This is a simple blog website made with Nodejs, and uses mongoDB to store the da
 ### Website hosted on Heroku and database on Mongodb Atlas
 
 
-- [Demo](https://blogp0st.herokuapp.com/)
+- [Demo](https://blogpost.f2had.me/)
 
 
 
